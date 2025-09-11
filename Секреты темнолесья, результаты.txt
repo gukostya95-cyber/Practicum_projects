@@ -1,0 +1,190 @@
+-- Часть 1. Исследовательский анализ данных
+-- Задача 1. Исследование доли платящих игроков
+
+-- 1.1. Доля платящих пользователей по всем данным:
+total_users|total_users_pay|share_users|
+-----------+---------------+-----------+
+      22214|           3929|       0.18|
+1.2. Доля платящих пользователей в разрезе расы персонажа:
+race    |total_users|total_users_pay|share_user_race|
+--------+-----------+---------------+---------------+
+Human   |       6328|           1114|           0.18|
+Hobbit  |       3648|            659|           0.18|
+Orc     |       3619|            636|           0.18|
+Northman|       3562|            626|           0.18|
+Elf     |       2501|            427|           0.17|
+Angel   |       1327|            229|           0.17|
+Demon   |       1229|            238|           0.19|
+Задача 2. Исследование внутриигровых покупок
+-- 2.1. Статистические показатели по полю amount:
+total_transactions|sum_amount|max_amount|min_amount|avg_amount       |mediana_amount|std_amount       |
+------------------+----------+----------+----------+-----------------+--------------+-----------------+
+           1307678| 686615040|  486615.1|       0.0|525.6919663589833|         74.86|2517.345444427788|
+-- 2.2: Аномальные нулевые покупки:
+zero_count_amount|total_amount|share_amount_zero |
+-----------------+------------+------------------+
+              907|     1307678|0.0006935958240484|
+2.3: Сравнительный анализ активности платящих и неплатящих игроков:
+category  |total_users|avg_count_pay|avg_sum_amount|
+----------+-----------+-------------+--------------+
+неплатящие|      11348|        97.56|      48631.74|
+платящие  |       2444|        81.68|      55467.75|
+-- 2.4: Популярные эпические предметы:
+game_items               |total_pay_items|unique_users|share_items|share_users|
+-------------------------+---------------+------------+-----------+-----------+
+Book of Legends          |        1004516|       12194|       0.77|       0.88|
+Bag of Holding           |         271875|       11968|       0.21|       0.87|
+Necklace of Wisdom       |          13828|        1627|       0.01|       0.12|
+Gems of Insight          |           3833|         926|       0.00|       0.07|
+Treasure Map             |           3183|         819|       0.00|       0.06|
+Amulet of Protection     |           1078|         445|       0.00|       0.03|
+Silver Flask             |            795|         633|       0.00|       0.05|
+Strength Elixir          |            580|         331|       0.00|       0.02|
+Glowing Pendant          |            563|         354|       0.00|       0.03|
+Gauntlets of Might       |            514|         281|       0.00|       0.02|
+Sea Serpent Scale        |            458|          59|       0.00|       0.00|
+Ring of Wisdom           |            379|         310|       0.00|       0.02|
+Potion of Speed          |            375|         231|       0.00|       0.02|
+Magic Ornament           |            282|         113|       0.00|       0.01|
+Ring of Invisibility     |            252|         184|       0.00|       0.01|
+Magical Lantern          |            247|         102|       0.00|       0.01|
+Herbs for Potions        |            241|         148|       0.00|       0.01|
+Potion of Acceleration   |            230|         180|       0.00|       0.01|
+Feather of Writing       |            222|         154|       0.00|       0.01|
+Enemy Traps              |            168|          94|       0.00|       0.01|
+Time Artifact            |            168|         148|       0.00|       0.01|
+Scroll of Magic          |            162|         117|       0.00|       0.01|
+Monster Compendium       |            151|         138|       0.00|       0.01|
+Water of Life            |            142|         122|       0.00|       0.01|
+Pegasus Feather          |            138|          26|       0.00|       0.00|
+Trap Chest               |            137|         120|       0.00|       0.01|
+Magic Key                |            127|          81|       0.00|       0.01|
+Dungeon Map              |            108|          74|       0.00|       0.01|
+Runes of Power           |            106|          73|       0.00|       0.01|
+Antidote Potion          |             89|          47|       0.00|       0.00|
+Robe of the Magi         |             85|          80|       0.00|       0.01|
+Druid's Staff            |             83|          61|       0.00|       0.00|
+Mystic Compass           |             83|          54|       0.00|       0.00|
+Magic Dust               |             82|          72|       0.00|       0.01|
+Treasure Box             |             79|          46|       0.00|       0.00|
+Boots of Levitation      |             73|          55|       0.00|       0.00|
+Chimera Scale            |             67|          55|       0.00|       0.00|
+Enhanced Weapon          |             60|          41|       0.00|       0.00|
+Helm of Insight          |             57|          32|       0.00|       0.00|
+Phoenix Feather          |             56|          19|       0.00|       0.00|
+Orb of Time              |             56|          39|       0.00|       0.00|
+Potion of Intelligence   |             50|          47|       0.00|       0.00|
+Scroll of Summoning      |             49|          37|       0.00|       0.00|
+Orc Tusk                 |             45|          35|       0.00|       0.00|
+Quiver of Endless Arrows |             45|          19|       0.00|       0.00|
+Elf Ears                 |             44|          39|       0.00|       0.00|
+Shield of Valor          |             38|          28|       0.00|       0.00|
+Succubus Kiss            |             35|          25|       0.00|       0.00|
+Potion of Fortitude      |             31|          28|       0.00|       0.00|
+Boots of Swiftness       |             29|          24|       0.00|       0.00|
+Potion of Transformation |             28|          22|       0.00|       0.00|
+Scroll of Resurrection   |             27|          21|       0.00|       0.00|
+Transformation Potion    |             26|          24|       0.00|       0.00|
+Pendant of Healing       |             25|          22|       0.00|       0.00|
+Medallion of Magic       |             24|          19|       0.00|       0.00|
+Fire Resistance Potion   |             22|          15|       0.00|       0.00|
+Fairy Dust               |             21|          13|       0.00|       0.00|
+Mirror of Divination     |             21|          19|       0.00|       0.00|
+Armor of Magic Resistance|             21|          21|       0.00|       0.00|
+Potion of Regeneration   |             20|          17|       0.00|       0.00|
+Nature's Strength Potion |             20|          18|       0.00|       0.00|
+Enchanter's Amulet       |             19|          19|       0.00|       0.00|
+Crown of Kings           |             18|          18|       0.00|       0.00|
+Cloak of Shadows         |             15|          15|       0.00|       0.00|
+Dragon Cart              |             15|          11|       0.00|       0.00|
+Shield of Protection     |             14|          14|       0.00|       0.00|
+Potion of Light          |             13|          11|       0.00|       0.00|
+Kraken Ink               |             13|          11|       0.00|       0.00|
+Invisibility Potion      |             12|          10|       0.00|       0.00|
+Stone of Power           |             12|          11|       0.00|       0.00|
+Wyvern Claw              |             11|           6|       0.00|       0.00|
+Magic Animal             |             11|          10|       0.00|       0.00|
+Hydra Tooth              |             10|           9|       0.00|       0.00|
+Defender's Guard         |             10|           7|       0.00|       0.00|
+Traveler's Supplies      |             10|           6|       0.00|       0.00|
+Vampire Fang             |             10|           8|       0.00|       0.00|
+Potion of Wisdom         |              9|           8|       0.00|       0.00|
+Protective Cloak         |              9|           6|       0.00|       0.00|
+Staff of Flames          |              9|           8|       0.00|       0.00|
+Potion of Darkness       |              8|           7|       0.00|       0.00|
+Ancient Artifact         |              8|           4|       0.00|       0.00|
+Unicorn Horn             |              8|           4|       0.00|       0.00|
+Ethereal Horse           |              7|           6|       0.00|       0.00|
+Weapon Oil               |              7|           4|       0.00|       0.00|
+Mystic Bracelets         |              6|           5|       0.00|       0.00|
+Book of Spells           |              6|           5|       0.00|       0.00|
+Book of Curses           |              6|           5|       0.00|       0.00|
+Amulet of Time           |              6|           6|       0.00|       0.00|
+Griffin Feather          |              6|           4|       0.00|       0.00|
+Luminescent Gem          |              6|           5|       0.00|       0.00|
+Sorcerer's Stone         |              5|           5|       0.00|       0.00|
+Magic Sand               |              5|           2|       0.00|       0.00|
+Potion of Clarity        |              5|           4|       0.00|       0.00|
+Shovel of Secrets        |              5|           4|       0.00|       0.00|
+Silver Talons            |              5|           5|       0.00|       0.00|
+Weapon Decoration        |              5|           4|       0.00|       0.00|
+Ring of Strength         |              4|           3|       0.00|       0.00|
+Talisman of Luck         |              4|           2|       0.00|       0.00|
+Healer's Kit             |              4|           4|       0.00|       0.00|
+Diviner's Tarot Deck     |              4|           3|       0.00|       0.00|
+Wand of Lightning        |              4|           4|       0.00|       0.00|
+Crystal of Wisdom        |              4|           3|       0.00|       0.00|
+Magic Orb                |              4|           4|       0.00|       0.00|
+Prophet's Scroll         |              4|           4|       0.00|       0.00|
+Gold Coins               |              4|           4|       0.00|       0.00|
+Cleansing Potion         |              3|           2|       0.00|       0.00|
+Quill of Enchantment     |              3|           2|       0.00|       0.00|
+Compass of Truth         |              3|           1|       0.00|       0.00|
+Ring of Regeneration     |              3|           3|       0.00|       0.00|
+Boots of Haste           |              3|           3|       0.00|       0.00|
+Flask of Endless Water   |              3|           3|       0.00|       0.00|
+Cloak of Invisibility    |              2|           2|       0.00|       0.00|
+Paladin's Hammer         |              2|           2|       0.00|       0.00|
+Mystic's Rune Stones     |              2|           2|       0.00|       0.00|
+Necromancer's Wand       |              2|           2|       0.00|       0.00|
+Medusa's Snake           |              2|           2|       0.00|       0.00|
+Warlock's Grimoire       |              2|           2|       0.00|       0.00|
+Knight's Shield          |              2|           2|       0.00|       0.00|
+Protection Potion        |              2|           2|       0.00|       0.00|
+Book of Rituals          |              2|           2|       0.00|       0.00|
+Bandages of Recovery     |              2|           2|       0.00|       0.00|
+Manticore Tail           |              2|           2|       0.00|       0.00|
+Mermaid's Tear           |              1|           1|       0.00|       0.00|
+Sword of Flames          |              1|           1|       0.00|       0.00|
+Sword of Ice             |              1|           1|       0.00|       0.00|
+Map of Realms            |              1|           1|       0.00|       0.00|
+Elixir of Mana           |              1|           1|       0.00|       0.00|
+Gloves of Strength       |              1|           1|       0.00|       0.00|
+Magic Carpet             |              1|           1|       0.00|       0.00|
+Dragon Scale             |              1|           1|       0.00|       0.00|
+Potion of Power          |              1|           1|       0.00|       0.00|
+Scroll of Fireball       |              1|           1|       0.00|       0.00|
+Elixir of Night Vision   |              1|           1|       0.00|       0.00|
+Bow of Precision         |              1|           1|       0.00|       0.00|
+Bow of Magic             |              1|           1|       0.00|       0.00|
+Mystic Armor             |              1|           1|       0.00|       0.00|
+Boots of Silence         |              1|           1|       0.00|       0.00|
+Incubus Whisper          |              1|           1|       0.00|       0.00|
+Demon's Horn             |              1|           1|       0.00|       0.00|
+Werewolf Fur             |              1|           1|       0.00|       0.00|
+Spectral Shield          |              1|           1|       0.00|       0.00|
+Monk's Prayer Beads      |              1|           1|       0.00|       0.00|
+Minotaur Horn            |              1|           1|       0.00|       0.00|
+Stone of Teleportation   |              1|           1|       0.00|       0.00|
+
+Часть 2. Решение ad hoc-задач
+Зависимость активности игроков от расы персонажа:
+race    |total_users|total_pay_users|share_users_pay|share_pay_users_total_users|avg_count_race|avg_amount_race|avg_standart|avg_sum_race|
+--------+-----------+---------------+---------------+---------------------------+--------------+---------------+------------+------------+
+Human   |       6328|           3921|           0.18|                       0.62|        121.40|         733.62|      403.13|    48941.01|
+Hobbit  |       3648|           2266|           0.18|                       0.62|         86.13|         699.90|      552.90|    47620.92|
+Orc     |       3619|           2276|           0.17|                       0.63|         81.74|         709.44|      510.90|    41760.04|
+Northman|       3562|           2229|           0.18|                       0.63|         82.10|         781.05|      761.50|    62520.66|
+Elf     |       2501|           1543|           0.16|                       0.62|         78.79|         791.84|      682.34|    53761.65|
+Angel   |       1327|            820|           0.17|                       0.62|        106.80|         775.55|      455.68|    48668.65|
+Demon   |       1229|            737|           0.20|                       0.60|         77.87|         735.48|      529.06|    41197.38|
